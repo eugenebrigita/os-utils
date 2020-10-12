@@ -1,5 +1,7 @@
+
 alias cl='clear'
 alias h='history'  
+alias ggg='git pull; git add -A; git commit -m "OS202 eugenebrigita"; git push;'
 alias mv='mv -i'  
 alias rm='rm -i'  
 alias sss='. ~/.profile'
@@ -9,7 +11,7 @@ alias rsyncDocs="  rsync -auv --delete -e 'ssh -p 6023' eugenebrigita@localhost:
 alias rsyncDemos=" rsync -auv --delete -e 'ssh -p 6023' eugenebrigita@localhost:/extra/Demos/  /home/eugenebrigita/extra/Demos/"
 alias rsyncSlides="rsync -auv --delete -e 'ssh -p 6023' eugenebrigita@localhost:/extra/Slides/ /home/eugenebrigita/extra/Slides/"
 # REV01 Mon 05 Oct 2020 09:14:50 AM WIB (rms46)
-# START 2020 (rms46)
+# START Sat 19 Sep 2020 00:00:00 (rms46)
 gitstat() {
    git rev-parse --is-inside-work-tree &> /dev/null
    [ "$?" == "0" ] && git status
@@ -29,7 +31,7 @@ chktoken() {
         echo "Example 3) chktoken XXXX"
         echo "           $(chktoken XXXX)"
         echo "Is $USER your GitHub Account? If not, please create a new user name"
-        echo "If not, please create a new user name"
+        echo "If not, please cleate a new user name"
         return 0
     } || [ $1 == 0 ] && {
         echo "0"
@@ -55,11 +57,11 @@ verifyToken() {
         return 0
     }
     DATE="$(echo $3 | cut -d' ' -f2 | cut -d'-' -f1)"
-    SHA="$(echo  $3 | cut -d' ' -f2 | cut -d'-' -f2 )"
+    SHA="$(echo  $3 | cut -d' ' -f2 | cut -d'-' -f2)"
     RESULT="$(echo $DATE$2$1 | sha1sum  | cut -c1-4 | tr '[:lower:]' '[:upper:]' )"
-    [ $SHA == $RESULT ] && RETURN="1" || RETURN="0"
-    [ -z $4 ]           || return $RETURN
-    [ "$RETURN" == "1" ] && echo "Verified"  || echo "Error"
+    [ $SHA == $RESULT  ] && RETURN="1"      || RETURN="0"
+    [ -z $4 ]            || return $RETURN
+    [ "$RETURN" == "1" ] && echo "Verified" || echo "Error"
 }
 export EDITOR=/usr/bin/vi
 export HISTSIZE=2000
