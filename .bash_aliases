@@ -1,4 +1,3 @@
-
 alias cl='clear'
 alias h='history'  
 alias ggg='git pull; git add -A; git commit -m "OS202 eugenebrigita"; git push;'
