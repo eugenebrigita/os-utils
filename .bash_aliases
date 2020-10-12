@@ -6,9 +6,9 @@ alias rm='rm -i'
 alias sss='. ~/.profile'
 alias sbadak="ssh -p 6023 eugene.brigita@localhost"
 alias tunnel='ssh -L 6023:badak.cs.ui.ac.id:22 eugene.brigita@kawung.cs.ui.ac.id'
-alias rsyncDocs="  rsync -auv --delete -e 'ssh -p 6023' eugenebrigita@localhost:/extra/Docs/   /home/eugenebrigita/extra/Docs/"
-alias rsyncDemos=" rsync -auv --delete -e 'ssh -p 6023' eugenebrigita@localhost:/extra/Demos/  /home/eugenebrigita/extra/Demos/"
-alias rsyncSlides="rsync -auv --delete -e 'ssh -p 6023' eugenebrigita@localhost:/extra/Slides/ /home/eugenebrigita/extra/Slides/"
+alias rsyncDocs="  rsync -auv --delete -e 'ssh -p 6023' eugene.brigita@localhost:/extra/Docs/   /home/eugenebrigita/extra/Docs/"
+alias rsyncDemos=" rsync -auv --delete -e 'ssh -p 6023' eugene.brigita@localhost:/extra/Demos/  /home/eugenebrigita/extra/Demos/"
+alias rsyncSlides="rsync -auv --delete -e 'ssh -p 6023' eugene.brigita@localhost:/extra/Slides/ /home/eugenebrigita/extra/Slides/"
 # REV01 Mon 05 Oct 2020 09:14:50 AM WIB (rms46)
 # START Sat 19 Sep 2020 00:00:00 (rms46)
 gitstat() {
